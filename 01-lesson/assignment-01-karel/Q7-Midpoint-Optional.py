@@ -16,34 +16,38 @@ def main():
       put_beeper()
       turn()
     else:
-      turn_left()
-      turn_left()
+      turn()
       move()
       turn()
-      walk_diagonal()
+      # Drawind Diagonal
+      walkDiagonal()
       turn_right()
-      walk_vertical()
+      # Drwawing vertical
+      walkVertical()
       turn_right()
-      walk_intersection()
-      clean_beepers()
-      clean_walk_diagonal()
+      walkIntersection()
+      # Clean beepers on diagonal
+      getPositionBeforeClean()
+      cleanBeepersDiagonal()
       turn_right()
-      walk_vertical()
+      walkVertical()
       turn_right()
-      clean_walk_intersection()
+      # Clean beepers on intersection
+      cleanBeepersIntersection()
       turn_left()
-      walk_vertical()
+      walkVertical()
       turn_left()
+      # Position of Karel at the end
       while no_beepers_present():
         move()
       turn_right()
       turn_right()
 
-def walk_vertical():
+def walkVertical():
    while front_is_clear():
      move()
 
-def walk_intersection():
+def walkIntersection():
   while front_is_clear():
     put_beeper()
     turn_right()
@@ -64,7 +68,7 @@ def walk_intersection():
         if front_is_blocked():
             put_beeper()
 
-def clean_walk_intersection():
+def cleanBeepersIntersection():
   while front_is_clear():
     if beepers_present():
       pick_beeper()
@@ -74,13 +78,13 @@ def clean_walk_intersection():
       turn_left()
       move()
 
-def clean_beepers():
+def  getPositionBeforeClean():
   turn_right()
   while front_is_clear():
     move()
   turn()
 
-def clean_walk_diagonal():
+def cleanBeepersDiagonal():
   while front_is_clear():
     pick_beeper()
     turn_left()
@@ -88,7 +92,7 @@ def clean_walk_diagonal():
     turn_right()
     move()    
 
-def walk_diagonal():
+def walkDiagonal():
   while front_is_clear():
     put_beeper()
     turn_left()
