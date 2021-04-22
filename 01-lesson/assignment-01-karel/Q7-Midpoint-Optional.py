@@ -45,28 +45,34 @@ def walk_vertical():
 
 def walk_intersection():
   while front_is_clear():
-        put_beeper()
-        turn_right()
-        move()
-        if no_beepers_present():
-          turn_left()
+    put_beeper()
+    turn_right()
+    move()
+    if no_beepers_present():
+      turn_left()
+      move()
+      if beepers_present():
+        turn_left()
+        while front_is_clear():
           move()
-        else:
-          turn()
-          while front_is_clear():
-            move()
-            if front_is_blocked():
-                put_beeper()
+          if front_is_blocked():
+              put_beeper()
+    else:
+      turn()
+      while front_is_clear():
+        move()
+        if front_is_blocked():
+            put_beeper()
 
 def clean_walk_intersection():
   while front_is_clear():
-        if beepers_present():
-          pick_beeper()
-        turn_right()
-        move()
-        if no_beepers_present():
-          turn_left()
-          move()
+    if beepers_present():
+      pick_beeper()
+    turn_right()
+    move()
+    if no_beepers_present():
+      turn_left()
+      move()
 
 def clean_beepers():
   turn_right()
@@ -76,11 +82,11 @@ def clean_beepers():
 
 def clean_walk_diagonal():
   while front_is_clear():
-      pick_beeper()
-      turn_left()
-      move()
-      turn_right()
-      move()    
+    pick_beeper()
+    turn_left()
+    move()
+    turn_right()
+    move()    
 
 def walk_diagonal():
   while front_is_clear():
@@ -100,4 +106,4 @@ def turn():
   turn_left()
 
 if __name__ == '__main__':
-    run_karel_program('Midpoint3.w')
+    run_karel_program('Midpoint.w')
