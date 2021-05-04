@@ -9,8 +9,7 @@ def main():
     user_input = int(input("Type a number: "))
     if user_input == -1:
        break
-    else:
-       total_sum += user_input
+    total_sum += user_input
    print(f"total is {total_sum}")
 
 if __name__ == '__main__':
