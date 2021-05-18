@@ -219,6 +219,10 @@ class SimpleImage(object):
         """Displays the image using an external utility."""
         self.pil_image.show()
 
+    def close(self):
+        """Displays the image using an external utility."""
+        self.pil_image.close()
+
     def make_as_big_as(self, image):
         """Resizes image to the shape of the given image"""
         self.pil_image = self.pil_image.resize((image.width, image.height))

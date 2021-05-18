@@ -43,6 +43,5 @@ def trim_crop_image(original_img, trim_size):
     return new_image
     
 
-
 if __name__ == '__main__':
     main()
