@@ -7,8 +7,8 @@ import random
 import sys
 
 
-N_ROWS = 4
-N_COLS = 4
+N_ROWS = 6
+N_COLS = 6
 PATCH_SIZE = 200
 WIDTH = N_COLS * PATCH_SIZE
 HEIGHT = N_ROWS * PATCH_SIZE
