@@ -1,0 +1,160 @@
+<PL>:
+    Label:
+        text: "Python List"
+        size_hint: 0.6, 0.2
+        pos_hint: {"x":0.2, "top":1}
+        font_size:23
+    TextInput:
+        text: '\nLists are used to store multiple items in a single variable.\n\nExample:\n\nmylist = ["Chris", "Mehran", "Julie"]'
+        multinline:False
+        font_size:20
+        size_hint: 0.8, 0.7
+        pos_hint: {"x":0.1, "top":0.85}
+        disabled: True
+
+    Button:
+        text: "See more!"
+        size_hint: 0.8, 0.2
+        pos_hint: {"x":0.1, "top":0.1}
+        background_color:0.1,1.2,0.5,1.5
+        on_press:root.btn5_list()
+        
+
+<PD>:
+    Label:
+        text: "Python Dictionaries"
+        size_hint: 0.6, 0.2
+        pos_hint: {"x":0.2, "top":1}
+        font_size:23
+    TextInput:
+        text: '\nDictionaries are used to store data values in key:value pairs.\n\nExample:\n\nmy_dict = {\n"brand": "Ford",\n"model": "Mustang",\n,"year": 1964\n}'
+        multinline:False
+        font_size:20
+        size_hint: 0.8, 0.7
+        pos_hint: {"x":0.1, "top":0.85}
+        disabled: True
+
+    Button:
+        text: "See more!"
+        size_hint: 0.8, 0.2
+        pos_hint: {"x":0.1, "top":0.1}
+        background_color:0.1,1.2,0.5,1.5
+        on_press:root.btn6_dicc()
+
+
+<PI>:
+    Label:
+        text: "Python Images"
+        font_size:23
+        size_hint: 0.6, 0.2
+        pos_hint: {"x":0.2, "top":1}
+    TextInput:
+        text: '\nWhat is an image?\n\nAn image is made of square pixels. We used SimpleImage Library to manipulate images colors, size, pixels'
+        multinline:False
+        font_size:20
+        size_hint: 0.8, 0.7
+        pos_hint: {"x":0.1, "top":0.85}
+        disabled: True
+
+    Button:
+        text: "Example!"
+        on_press:root.btn4_images()
+        size_hint: 0.8, 0.2
+        pos_hint: {"x":0.1, "top":0.1}
+        background_color:0.1,1.2,0.5,1.5
+
+
+<PCF>:
+    Label:
+        text: "Python Control Flow"
+        size_hint: 0.6, 0.2
+        font_size:23
+        pos_hint: {"x":0.2, "top":1}
+    TextInput:
+        text: "\nA program's control flow is the order in which the program's code executes. The control flow of a Python program is regulated by conditional statements, loops, and function calls. \n\nExamples\n- if\n- while\n- Booleans\n- for"
+        multinline:False
+        font_size:18
+        size_hint: 0.8, 0.7
+        pos_hint: {"x":0.1, "top":0.85}
+        disabled: True
+    Button:
+        text: "See more!"
+        size_hint: 0.8, 0.2
+        pos_hint: {"x":0.1, "top":0.1}
+        background_color:0.1,1.2,0.5,1.5
+        on_press:root.btn7_cf()
+
+<PS>:
+    Label:
+        text: "Surprise!"
+        size_hint: 0.6, 0.2
+        font_size:23
+        pos_hint: {"x":0.2, "top":1}
+    TextInput:
+        text: "   Thank you \nCode in Place!\n\n           :)"
+        multinline:False
+        font_size:50
+        size_hint: 0.8, 0.7
+        pos_hint: {"x":0.1, "top":0.85}
+        disabled: True
+    Button:
+        text: "See surprise!"
+        size_hint: 0.8, 0.2
+        pos_hint: {"x":0.1, "top":0.1}
+        background_color:0.1,1.2,0.5,1.5
+        on_press:root.btn8_surprise()
+
+<MyGrid> 
+
+    GridLayout:
+        
+        cols: 1
+        size: root.width , root.height
+
+        canvas.before:
+            Color:
+                rgba: 1, .2, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    
+        GridLayout:      
+
+            cols:2
+        
+            Button:
+                text: "List"
+                on_press:root.btn1()
+                font_size:35
+                background_color:1.0,0.0,0.8,1
+                
+        
+            Button:
+                text: "Dictionaries"
+                on_press:root.btn2()
+                font_size:35
+                background_color:0.3,0.0,0.9,1
+
+            Button:
+                text: "Control Flow"
+                on_press:root.btn3()
+                font_size:35
+                background_color:0.2,0.9,0.5,1
+                     
+          
+            Button:
+                text: "Images"
+                on_press:root.btn4()
+                font_size:35
+                background_color:1.2,0,0.0,0.8
+            
+            
+        GridLayout:
+            cols:1
+            Button:
+                text: "Code in Place Surprice"
+                on_press:root.btn5()  
+                font_size:40
+                background_color:0.0,1.9,1.2,1.5
+        
+
